@@ -112,9 +112,9 @@ export default function HomePage() {
       <header className="border-b border-border bg-card backdrop-blur-sm sticky top-0 z-40 shadow-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <TrendingUp className="h-6 w-6 text-primary-foreground" />
+            <div className="flex items-center gap-4">
+              <div className="w-14 h-14 rounded-xl overflow-hidden bg-white shadow-sm flex items-center justify-center p-2">
+                <img src="/logo.png" alt="Pulse Logo" className="w-full h-full object-contain" />
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-foreground">
