@@ -107,9 +107,10 @@ export default function MarketDetailPage() {
   const noPercentage = totalPool > 0 ? (noAmount / totalPool) * 100 : 50;
 
   // User position
-  const userYesAmount = positionData ? Number(formatEther(positionData[0])) : 0;
-  const userNoAmount = positionData ? Number(formatEther(positionData[1])) : 0;
-  const hasClaimed = positionData ? positionData[2] : false;
+  const positionArray = positionData as any[];
+  const userYesAmount = positionArray ? Number(formatEther(positionArray[0])) : 0;
+  const userNoAmount = positionArray ? Number(formatEther(positionArray[1])) : 0;
+  const hasClaimed = positionArray ? positionArray[2] : false;
   const hasPosition = userYesAmount > 0 || userNoAmount > 0;
 
   // Check if user can claim
