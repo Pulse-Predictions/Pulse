@@ -29,6 +29,7 @@ import {
   Filter,
   Brain,
   Palette,
+  Github,
 } from 'lucide-react';
 
 export default function HomePage() {
@@ -124,6 +125,26 @@ export default function HomePage() {
               </div>
             </div>
             <div className="flex items-center gap-2">
+              <a
+                href="https://x.com/PulseBSC"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 flex items-center justify-center rounded-lg hover:bg-primary/10 transition-colors"
+                aria-label="Follow us on X"
+              >
+                <svg className="h-5 w-5 text-primary" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
+              <a
+                href="https://github.com/Pulse-Predictions/Pulse"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 flex items-center justify-center rounded-lg hover:bg-primary/10 transition-colors"
+                aria-label="View on GitHub"
+              >
+                <Github className="h-5 w-5 text-primary" />
+              </a>
               <ThemeToggle />
               <RainbowKitButton />
             </div>
@@ -331,14 +352,42 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="border-t border-border bg-card/50 py-8">
-        <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p className="mb-2">
-            Built for Seedify Prediction Markets Hackathon 2025 • Powered by BNB
-            Chain
-          </p>
-          <p className="text-xs">
-            🏆 YZi Labs Track: AI Oracles + Gasless UX + Liquidity Aggregation
-          </p>
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center gap-4">
+            <div className="flex items-center gap-6">
+              <a
+                href="https://x.com/PulseBSC"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Follow us on X"
+              >
+                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+                <span className="text-sm font-medium">@PulseBSC</span>
+              </a>
+              <a
+                href="https://github.com/Pulse-Predictions/Pulse"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                aria-label="View on GitHub"
+              >
+                <Github className="h-5 w-5" />
+                <span className="text-sm font-medium">Pulse-Predictions</span>
+              </a>
+            </div>
+            <div className="text-center text-sm text-muted-foreground">
+              <p className="mb-2">
+                Built for Seedify Prediction Markets Hackathon 2025 • Powered by BNB
+                Chain
+              </p>
+              <p className="text-xs">
+                🏆 YZi Labs Track: AI Oracles + Gasless UX + Liquidity Aggregation
+              </p>
+            </div>
+          </div>
         </div>
       </footer>
 
