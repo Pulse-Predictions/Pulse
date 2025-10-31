@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Default: Light theme (Polymarket-style white background) */
+    /* Clean, bright interface matching Polymarket */
+    --background: 0 0% 100%;            /* #FFFFFF - Pure white background */
+    --foreground: 220 13% 13%;          /* #1E2024 - Near black text */
+    --card: 0 0% 100%;                  /* #FFFFFF - Pure white cards */
+    --card-foreground: 220 13% 13%;     /* #1E2024 - Near black text */
+    --popover: 0 0% 100%;               /* #FFFFFF - White popovers */
+    --popover-foreground: 220 13% 13%;  /* #1E2024 - Dark text */
+    --primary: 217 91% 60%;             /* #3B82F6 - Bright blue (Polymarket style) */
+    --primary-foreground: 0 0% 100%;    /* #FFFFFF - White text on blue */
+    --secondary: 210 17% 96%;           /* #F3F4F6 - Very light gray */
+    --secondary-foreground: 220 13% 13%; /* #1E2024 - Dark text */
+    --muted: 210 17% 96%;               /* #F3F4F6 - Muted backgrounds */
+    --muted-foreground: 220 9% 46%;     /* #6B7280 - Medium gray text */
+    --accent: 262 83% 58%;              /* #8B5CF6 - Purple accent */
+    --accent-foreground: 0 0% 100%;     /* #FFFFFF - White on purple */
+    --destructive: 0 84% 60%;           /* #EF4444 - Red for negative */
+    --destructive-foreground: 0 0% 100%; /* #FFFFFF - White on red */
+    --success: 142 76% 36%;             /* #10B981 - Green for positive */
+    --success-foreground: 0 0% 100%;    /* #FFFFFF - White on green */
+    --border: 220 13% 91%;              /* #E5E7EB - Light gray borders */
+    --input: 0 0% 100%;                 /* #FFFFFF - White inputs */
+    --ring: 217 91% 60%;                /* #3B82F6 - Blue focus ring */
+    --radius: 0.5rem;
+    
+    /* BNB Chain Brand Accent */
+    --bnb-gold: 45 93% 47%;             /* #F0B90B - BNB Gold */
+    --bnb-gold-foreground: 0 0% 100%;   /* White text on gold */
+  }
+
+  .dark {
+    /* Dark theme for nighttime (6 PM - 6 AM) */
+    /* Polymarket-inspired Dark Theme */
+    --background: 222 47% 7%;           /* #0A0E17 - Deep navy-black */
+    --foreground: 210 40% 98%;          /* #F8FAFC - Off-white */
+    --card: 220 39% 11%;                /* #141823 - Dark charcoal cards */
+    --card-foreground: 210 40% 98%;     /* #F8FAFC - Off-white */
+    --popover: 220 39% 11%;             /* #141823 - Dark charcoal */
+    --popover-foreground: 210 40% 98%;  /* #F8FAFC - Off-white */
+    --primary: 217 91% 60%;             /* #3B82F6 - Bright blue */
+    --primary-foreground: 210 40% 98%;  /* #F8FAFC - White text on blue */
+    --secondary: 215 28% 17%;           /* #1E293B - Darker gray */
+    --secondary-foreground: 210 40% 98%; /* #F8FAFC - Off-white */
+    --muted: 215 28% 17%;               /* #1E293B - Muted backgrounds */
+    --muted-foreground: 215 16% 65%;    /* #94A3B8 - Gray text */
+    --accent: 262 83% 58%;              /* #8B5CF6 - Purple accent */
+    --accent-foreground: 210 40% 98%;   /* #F8FAFC - White on purple */
+    --destructive: 0 84% 60%;           /* #EF4444 - Red for negative */
+    --destructive-foreground: 210 40% 98%; /* #F8FAFC - White on red */
+    --success: 142 76% 36%;             /* #10B981 - Green for positive */
+    --success-foreground: 210 40% 98%;  /* #F8FAFC - White on green */
+    --border: 215 28% 17%;              /* #1E293B - Subtle borders */
+    --input: 215 28% 17%;               /* #1E293B - Input backgrounds */
+    --ring: 217 91% 60%;                /* #3B82F6 - Blue focus ring */
+    
+    /* BNB Chain Brand Accent */
+    --bnb-gold: 45 93% 47%;             /* #F0B90B - BNB Gold */
+    --bnb-gold-foreground: 222 47% 11%; /* Dark text on gold */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom scrollbar - Polymarket style */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted));
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+  
+  /* Theme transition for all color-based properties */
+  * {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+  }
+}
