@@ -5,6 +5,8 @@
 
 'use client';
 
+export const dynamic = 'force-dynamic';
+
 import { useState, useEffect } from 'react';
 import { useAccount } from 'wagmi';
 import { Card } from '@/components/ui/card';

@@ -10,6 +10,8 @@
  * - AI Analytics
  */
 
+export const dynamic = 'force-dynamic';
+
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { CreativeMarketsGrid } from '@/components/CreativeMarketCard';
