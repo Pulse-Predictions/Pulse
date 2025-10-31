@@ -43,14 +43,6 @@ export function ThemeProvider({
     return hour >= 6 && hour < 18 ? 'light' : 'dark';
   };
 
-  // Get theme preference from system
-  const getSystemTheme = (): ResolvedTheme => {
-    if (typeof window === 'undefined') return 'light';
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light';
-  };
-
   // Resolve the actual theme to apply
   const resolveTheme = (themePreference: Theme): ResolvedTheme => {
     if (themePreference === 'auto') {
@@ -93,6 +85,7 @@ export function ThemeProvider({
       const resolved = resolveTheme(defaultTheme);
       applyTheme(resolved);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Watch for time changes (check every minute for auto theme)
@@ -110,6 +103,7 @@ export function ThemeProvider({
     const interval = setInterval(checkTimeBasedTheme, 60000);
 
     return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [theme, resolvedTheme]);
 
   // Watch for system theme changes (as fallback)
@@ -146,4 +140,3 @@ export function ThemeProvider({
     <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
   );
 }
-

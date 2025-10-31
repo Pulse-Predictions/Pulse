@@ -57,8 +57,12 @@ export default function LeaderboardPage() {
               </Button>
 
               <div>
-                <h1 className="text-2xl font-bold text-foreground">Leaderboard</h1>
-                <p className="text-sm text-muted-foreground">Top performing traders</p>
+                <h1 className="text-2xl font-bold text-foreground">
+                  Leaderboard
+                </h1>
+                <p className="text-sm text-muted-foreground">
+                  Top performing traders
+                </p>
               </div>
             </div>
 
@@ -81,7 +85,9 @@ export default function LeaderboardPage() {
                   <TrendingUp className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <div className="text-sm text-muted-foreground">Total Traders</div>
+                  <div className="text-sm text-muted-foreground">
+                    Total Traders
+                  </div>
                   <div className="text-2xl font-bold text-foreground">
                     {traders?.length || 0}
                   </div>
@@ -95,7 +101,9 @@ export default function LeaderboardPage() {
                   <Calendar className="h-5 w-5 text-success" />
                 </div>
                 <div>
-                  <div className="text-sm text-muted-foreground">Avg Win Rate</div>
+                  <div className="text-sm text-muted-foreground">
+                    Avg Win Rate
+                  </div>
                   <div className="text-2xl font-bold text-foreground">
                     {traders && traders.length > 0
                       ? `${(traders.reduce((sum, t) => sum + t.stats.winRate, 0) / traders.length).toFixed(1)}%`
@@ -111,8 +119,12 @@ export default function LeaderboardPage() {
                   <span className="text-2xl">💰</span>
                 </div>
                 <div>
-                  <div className="text-sm text-muted-foreground">Total Volume</div>
-                  <div className="text-2xl font-bold text-foreground">$2.4M+</div>
+                  <div className="text-sm text-muted-foreground">
+                    Total Volume
+                  </div>
+                  <div className="text-2xl font-bold text-foreground">
+                    $2.4M+
+                  </div>
                 </div>
               </div>
             </Card>

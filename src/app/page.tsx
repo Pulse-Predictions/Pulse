@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -26,7 +27,6 @@ import {
   Shield,
   Sparkles,
   Search,
-  Filter,
   Brain,
   Palette,
   Github,
@@ -115,13 +115,19 @@ export default function HomePage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               <div className="w-14 h-14 rounded-xl overflow-hidden bg-white shadow-sm flex items-center justify-center p-2">
-                <img src="/logo.png" alt="Pulse Logo" className="w-full h-full object-contain" />
+                <Image
+                  src="/logo.png"
+                  alt="Pulse Logo"
+                  width={56}
+                  height={56}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-foreground">
-                  Pulse
-                </h1>
-                <p className="text-xs text-muted-foreground">Powered by BNB Chain</p>
+                <h1 className="text-2xl font-bold text-foreground">Pulse</h1>
+                <p className="text-xs text-muted-foreground">
+                  Powered by BNB Chain
+                </p>
               </div>
             </div>
             <div className="flex items-center gap-2">
@@ -132,7 +138,11 @@ export default function HomePage() {
                 className="w-9 h-9 flex items-center justify-center rounded-lg hover:bg-primary/10 transition-colors"
                 aria-label="Follow us on X"
               >
-                <svg className="h-5 w-5 text-primary" viewBox="0 0 24 24" fill="currentColor">
+                <svg
+                  className="h-5 w-5 text-primary"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                 </svg>
               </a>
@@ -185,7 +195,10 @@ export default function HomePage() {
               </Button>
             </Link>
             <Link href="/leaderboard">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white gap-2">
+              <Button
+                size="lg"
+                className="bg-blue-600 hover:bg-blue-700 text-white gap-2"
+              >
                 <TrendingUp className="h-5 w-5" />
                 View Leaderboard
               </Button>
@@ -215,7 +228,9 @@ export default function HomePage() {
               <h3 className="font-semibold text-foreground mb-1">
                 Pooled Liquidity
               </h3>
-              <p className="text-sm text-muted-foreground">45% better pricing</p>
+              <p className="text-sm text-muted-foreground">
+                45% better pricing
+              </p>
             </div>
           </div>
         </div>
@@ -280,7 +295,9 @@ export default function HomePage() {
 
         {/* Market Categories */}
         <div className="mb-8">
-          <h3 className="text-2xl font-bold mb-4 text-foreground">Browse Markets</h3>
+          <h3 className="text-2xl font-bold mb-4 text-foreground">
+            Browse Markets
+          </h3>
           <div className="flex items-center gap-4 mb-6 overflow-x-auto pb-2">
             <button
               onClick={() => setSelectedCategory('all')}
@@ -362,7 +379,11 @@ export default function HomePage() {
                 className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Follow us on X"
               >
-                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                <svg
+                  className="h-5 w-5"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                 </svg>
                 <span className="text-sm font-medium">@PulseBSC</span>
@@ -380,11 +401,12 @@ export default function HomePage() {
             </div>
             <div className="text-center text-sm text-muted-foreground">
               <p className="mb-2">
-                Built for Seedify Prediction Markets Hackathon 2025 • Powered by BNB
-                Chain
+                Built for Seedify Prediction Markets Hackathon 2025 • Powered by
+                BNB Chain
               </p>
               <p className="text-xs">
-                🏆 YZi Labs Track: AI Oracles + Gasless UX + Liquidity Aggregation
+                🏆 YZi Labs Track: AI Oracles + Gasless UX + Liquidity
+                Aggregation
               </p>
             </div>
           </div>

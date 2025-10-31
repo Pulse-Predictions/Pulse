@@ -258,9 +258,7 @@ export function AIMarketAnalytics({
               <h4 className="text-sm font-semibold text-blue-900 mb-1">
                 AI Recommendation
               </h4>
-              <p className="text-sm text-blue-700">
-                {analysis.recommendation}
-              </p>
+              <p className="text-sm text-blue-700">{analysis.recommendation}</p>
             </div>
           </div>
         </div>

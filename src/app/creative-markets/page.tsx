@@ -84,15 +84,17 @@ export default function CreativeMarketsPage() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <Link 
-                href="/" 
+              <Link
+                href="/"
                 className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
               >
                 <ArrowLeft className="h-4 w-4" />
                 <span className="text-sm font-medium">Back</span>
               </Link>
               <div className="h-4 w-px bg-border" />
-              <h1 className="text-lg font-bold text-foreground">Creative Markets</h1>
+              <h1 className="text-lg font-bold text-foreground">
+                Creative Markets
+              </h1>
             </div>
             <div className="flex items-center gap-2">
               <ThemeToggle />
@@ -215,7 +217,9 @@ export default function CreativeMarketsPage() {
         {selectedMarket && selectedMarketData && (
           <div className="fixed bottom-0 right-0 w-full md:w-96 max-h-[80vh] overflow-y-auto bg-card border-l border-t border-border shadow-2xl p-6 z-50">
             <div className="flex items-center justify-between mb-4">
-              <h3 className="font-bold text-lg text-foreground">Market Analysis</h3>
+              <h3 className="font-bold text-lg text-foreground">
+                Market Analysis
+              </h3>
               <button
                 onClick={() => setSelectedMarket(null)}
                 className="text-muted-foreground hover:text-foreground"
@@ -322,7 +326,9 @@ function LiquidityPoolCard({ pool }: any) {
         <div className="space-y-2 text-sm">
           <div className="flex justify-between">
             <span className="text-muted-foreground">TVL</span>
-            <span className="font-medium text-foreground">{pool.stats.tvl}</span>
+            <span className="font-medium text-foreground">
+              {pool.stats.tvl}
+            </span>
           </div>
           <div className="flex justify-between">
             <span className="text-muted-foreground">APR</span>
@@ -330,11 +336,15 @@ function LiquidityPoolCard({ pool }: any) {
           </div>
           <div className="flex justify-between">
             <span className="text-muted-foreground">24h Volume</span>
-            <span className="font-medium text-foreground">{pool.stats.volume24h}</span>
+            <span className="font-medium text-foreground">
+              {pool.stats.volume24h}
+            </span>
           </div>
           <div className="flex justify-between">
             <span className="text-muted-foreground">Markets</span>
-            <span className="font-medium text-foreground">{pool.stats.marketsSupported}</span>
+            <span className="font-medium text-foreground">
+              {pool.stats.marketsSupported}
+            </span>
           </div>
         </div>
       )}
